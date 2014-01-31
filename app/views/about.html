@@ -1,0 +1,34 @@
+<div class="container">
+  <section>
+    <h1>About me</h1>
+    <p>
+      Hi, my name is Tina and I'm a <strong>front-end developer</strong> and application interface designer based out of Toronto, Canada.
+    </p>
+    <p>
+      I specialize in Responsive Web Design, Mobile website design, Content Management and Accessibility.
+    </p>
+    <p>
+      I have designed and developed websites and applications for a variety of industries including (but not limited to) higher education, financial, mining, IT, not-for-profits, government-funded, software development startups, restaurants, caterers, independent artists and musicians.
+    </p>
+    <div ng-include src="templates.about"></div>
+  </section>
+
+  <section>
+    <h2>Tech specs</h2>
+    <p>
+      Technologies I know and love&hellip; and some that I don't love as much, too. <i class="fa fa-smile-o"></i>
+    </p>
+    <p>
+      Skills are meta tagged, too, so if you're looking for all command line tools you can type <code>cli</code> or <code>command line</code> to bring them up.
+    </p>
+    
+    <div class="search-section">
+      <i class="fa fa-search"></i>
+      <input type="text" ng-model="search" placeholder="Search them skills...">
+    </div>
+
+    <ul class="skills">
+      <li ng-repeat="skill in skills | filter:search"><i ng-if="skill.icon" class="fa fa-{{skill.icon}}"></i> {{skill.name}}</li>
+    </ul>
+  </section>
+</div> <!--// .container -->

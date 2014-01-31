@@ -1,0 +1,75 @@
+// layout sections
+section {
+  padding: 0.5em 0;
+
+  &:first-child {
+    padding-top: 2em;
+  }
+  
+  &:last-child {
+    padding-bottom: 3em;
+  }
+}
+
+// helpers
+.hidden-small {
+  display: inline;
+}
+
+// header
+.header-primary {
+  padding: 0;
+  font-size: 1.1em;
+  
+  .logo-section {
+    padding-top: 13px;
+    @include span-columns(4,12);
+
+    h1 {
+      span {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  // navigation
+  .nav-primary {
+    margin-top: 1em;
+    @include span-columns(8 omega,12);
+
+    a {
+      padding: 1em 0 1.4em;
+    }
+  }
+}
+
+// skills  
+.skills {
+  @include pie-clearfix;
+  font-size: 1em;
+
+  li {
+    margin: 5px;
+    padding: 7px;
+
+    i.fa {
+      margin-right: 5px;
+    }
+  }
+}
+
+// social media icons
+.social {
+  font-size: 1.2em;
+  margin: 1.5em 0;
+
+  a {
+    margin: 0.5em 0;
+    @include span-columns(4,12);
+    @include nth-omega(3n);
+
+    i.fa {
+      margin-right: 5px;
+    }
+  }
+}
