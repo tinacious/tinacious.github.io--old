@@ -61,6 +61,19 @@ section {
   }
 }
 
+// open source, github repos
+div.reposidget {
+  margin-bottom: 0;
+  clear: none;
+  @include span-columns(4,12);
+  @include nth-omega(3n);
+}
+
+.reposidget-content {
+  min-height: 110px;
+}
+
+
 // social media icons
 .social {
   font-size: 1.2em;

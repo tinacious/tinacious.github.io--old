@@ -21,6 +21,10 @@ body {
   background: #fff;
 }
 
+h1 {
+  line-height: 1.1em;
+}
+
 p {
   margin: 0.8em 0;
 }
@@ -61,6 +65,7 @@ a {
 }
 
 section {
+  @include pie-clearfix;
   padding: 0.2em 0;
 
   &:first-child {
@@ -201,6 +206,27 @@ section {
     &:hover {
       background: lighten($pink,5%);
       cursor: default;
+    }
+  }
+}
+
+// open source, github repos
+div.reposidget {
+  
+  a {
+    color: lighten($darkGrey,25%);
+  }
+}
+
+.reposidget-footer {
+  a {
+
+    &:hover {
+      border-color: lighten($pink,30%);
+      color: $pink;
+      @include background(linear-gradient(top, lighten($pink,30%), #fff));
+      text-decoration: none;
+      border-bottom-color: lighten($pink,25%);
     }
   }
 }
